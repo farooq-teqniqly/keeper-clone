@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './home/home.module';
-import { SecretsModule } from './secrets/secrets.module';
 import { NavComponent } from './nav/nav.component';
 
 @NgModule({
@@ -17,8 +16,7 @@ import { NavComponent } from './nav/nav.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HomeModule,
-    SecretsModule
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

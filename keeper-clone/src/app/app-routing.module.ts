@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeViewComponent } from './home/home-view/home-view.component';
 import { HomeModule } from './home/home.module';
-import { SecretsModule } from './secrets/secrets.module';
 
 const routes: Routes = [
   {
@@ -16,16 +15,16 @@ const routes: Routes = [
   },
   {
     path: 'secrets',
-    loadChildren: './secrets/secrets.module.ts#SecretsModule'
+    loadChildren: () => import('./secrets/secrets.module').then(m => m.SecretsModule)
   },
   {
     path: '**',
-    redirectTo: '/'
+    redirectTo: '/home'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), HomeModule, SecretsModule],
+  imports: [RouterModule.forRoot(routes), HomeModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
