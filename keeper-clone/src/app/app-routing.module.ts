@@ -15,6 +15,10 @@ const routes: Routes = [
     component: HomeViewComponent
   },
   {
+    path: 'secrets',
+    loadChildren: './secrets/secrets.module.ts#SecretsModule'
+  },
+  {
     path: '**',
     redirectTo: '/'
   }

@@ -4,7 +4,7 @@ import { SecretsViewComponent } from './secrets-view/secrets-view.component';
 
 const routes: Routes = [
   {
-    path: 'secrets',
+    path: '',
     component: SecretsViewComponent
   }
 ];
