@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SecretsViewComponent } from './secrets-view/secrets-view.component';
+import { SecretsRoutingModule } from './secrets-routing.module';
 
 
 
@@ -9,7 +10,7 @@ import { SecretsViewComponent } from './secrets-view/secrets-view.component';
     SecretsViewComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, SecretsRoutingModule
   ],
   exports: [
     SecretsViewComponent
