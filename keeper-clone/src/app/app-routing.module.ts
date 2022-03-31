@@ -14,6 +14,10 @@ const routes: Routes = [
     component: HomeViewComponent
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  },
+  {
     path: 'secrets',
     loadChildren: () => import('./secrets/secrets.module').then(m => m.SecretsModule)
   },
